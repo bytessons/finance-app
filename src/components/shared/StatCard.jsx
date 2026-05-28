@@ -15,7 +15,7 @@ export default function StatCard({ label, value, highlight = false, icon: Icon }
         {Icon && <Icon className={`w-3.5 h-3.5 ${highlight ? 'text-gold-500' : 'text-white/40'}`} />}
         <span className="text-xs font-sans text-white/50 uppercase tracking-wider">{label}</span>
       </div>
-      <span className={`font-mono text-base font-semibold tabular-nums ${highlight ? 'text-gold-400' : 'text-white/90'}`}>
+      <span className={`font-mono text-sm font-semibold tabular-nums leading-tight ${highlight ? 'text-gold-400' : 'text-white/90'}`}>
         {value}
       </span>
     </motion.div>

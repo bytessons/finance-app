@@ -17,10 +17,19 @@ export default function CalculatorModule() {
   const result = useMemo(() => calculateSavings(values), [values])
 
   return (
-    <div className="w-full max-w-2xl mx-auto px-4 py-6 flex flex-col gap-5">
-      <InputPanel values={values} onChange={setValues} />
-      <ResultsSummary result={result} years={values.years} />
-      <ChartPanel chartData={result.chartData} />
+    <div className="w-full max-w-7xl mx-auto px-4 py-6">
+      {/* Mobile: single column. Desktop (lg+): 3-col grid — results | inputs | chart */}
+      <div className="flex flex-col gap-5 lg:grid lg:grid-cols-[1fr_420px_1fr] lg:gap-6 lg:items-start">
+        <div className="order-2 lg:order-1">
+          <ResultsSummary result={result} years={values.years} />
+        </div>
+        <div className="order-1 lg:order-2">
+          <InputPanel values={values} onChange={setValues} />
+        </div>
+        <div className="order-3">
+          <ChartPanel chartData={result.chartData} />
+        </div>
+      </div>
     </div>
   )
 }

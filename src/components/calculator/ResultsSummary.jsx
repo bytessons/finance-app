@@ -61,7 +61,7 @@ export default function ResultsSummary({ result, years }) {
         <p className="text-xs font-sans text-white/30 mt-1.5">efter {years} år med ränta-på-ränta</p>
       </motion.div>
 
-      <div className="grid grid-cols-3 gap-3">
+      <div className="grid grid-cols-1 gap-3">
         <StatCard
           label="Inbetalt"
           value={formatCurrency(animatedDeposited)}

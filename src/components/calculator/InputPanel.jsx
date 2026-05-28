@@ -32,7 +32,7 @@ export default function InputPanel({ values, onChange }) {
         value={values.annualReturn}
         min={0}
         max={20}
-        step={0.1}
+        step={1}
         onChange={handle('annualReturn')}
         format={formatPercent}
       />

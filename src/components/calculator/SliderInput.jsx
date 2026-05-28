@@ -61,7 +61,7 @@ export default function SliderInput({ label, value, min, max, step, onChange, fo
           value={value}
           onChange={handleSlider}
           className="absolute inset-0 w-full opacity-0 cursor-pointer"
-          style={{ height: '100%', minHeight: '44px', top: '50%', transform: 'translateY(-50%)' }}
+          style={{ height: '100%', minHeight: '44px', top: '50%', transform: 'translateY(-50%)', touchAction: 'none' }}
         />
         <div
           className="absolute top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-gold-400 border-2 border-slate-900 shadow-lg pointer-events-none"
